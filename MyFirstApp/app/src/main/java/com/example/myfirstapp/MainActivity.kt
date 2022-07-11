@@ -1,18 +1,18 @@
 package com.example.myfirstapp
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import android.os.Bundle
+import android.widget.Button;
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+class MainActivity : AppCompatActivity()
+{
+    private val clickableButton:Button = findViewById<Button>(R.id.clickableButton);
 
-    }
-
-    public fun changeText(newText: String )
+    override fun onCreate(savedInstanceState: Bundle?)
     {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
+        clickableButton.text = "a changed name";
     }
 }
